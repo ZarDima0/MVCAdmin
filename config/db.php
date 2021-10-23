@@ -4,15 +4,16 @@ class DB
 {
     const USER = 'root';
     const PASS = '';
-    const HOST = 'localhost';
-    const DB = 'mvcphp';
+    const DNS = "mysql:dbname=mvcphp;host=localhost";
 
     public static function connToDB () {
         $user = self::USER;
         $pass = self::PASS;
-        $host = self::HOST;
-        $db = self::DB;
-        $conn = new PDO("mysql:dbname = $db;host = $host",$user,$pass);
+        $dns = self::DNS;
+
+        $conn = new PDO($dns,$user,$pass);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         return $conn;
     }
 }

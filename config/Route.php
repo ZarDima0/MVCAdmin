@@ -7,13 +7,17 @@ class Route
         $controllerName = "IndexController";
         $modelName = "IndexModel";
         
-        $route = explode('/',$_SERVER['REQUEST_URL']);
+        $route = explode('/', $_SERVER["REQUEST_URI"]);
+
         if($route[1] != '') {
-            $controllerName = ucfirst($route[1],'Controller');
-            $modelName = ucfirst($route[1],'Мodel');
+            $controllerName = ucfirst($route[1].'Controller');
+            $modelName = ucfirst($route[1].'Мodel');
+            echo '<pre>';
+            var_dump($modelName);
+            echo '</pre>';
         }
-        include CONTROLLER_PATH . $controllerName . '.php';
-        include MODEL_PATH . $modelName . '.php';
+        require_once CONTROLLER_PATH . $controllerName . '.php';
+        require_once MODEL_PATH . $modelName. '.php';
         if(isset($route[2]) && $route[2] != '') {
             $action = $route[2];
         }

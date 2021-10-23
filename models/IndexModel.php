@@ -10,11 +10,13 @@ class IndexModel extends Model
         $stmt->bindvalue(":login", $login, PDO::PARAM_STR);
         $stmt->bindvalue(":password", $password, PDO::PARAM_STR);
         $stmt->execute();
-
+        
         $res = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!empty($res)){
-            header('Location: /cabinet');
+
+            header('Location: /home');
+
         }else {
             false;
         }
