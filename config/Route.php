@@ -12,9 +12,6 @@ class Route
         if($route[1] != '') {
             $controllerName = ucfirst($route[1].'Controller');
             $modelName = ucfirst($route[1].'Мodel');
-            echo '<pre>';
-            var_dump($modelName);
-            echo '</pre>';
         }
         require_once CONTROLLER_PATH . $controllerName . '.php';
         require_once MODEL_PATH . $modelName. '.php';

@@ -14,9 +14,8 @@ class IndexModel extends Model
         $res = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!empty($res)){
-
+            $_SESSION['user'] = $login;
             header('Location: /home');
-
         }else {
             false;
         }
