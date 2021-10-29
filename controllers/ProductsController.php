@@ -8,6 +8,11 @@ class ProductsController extends Controller
 		$this->view = new View();
     }
     public function index () {
-        var_dump($_GET);
+        if (!$_SESSION['user']) {
+            header('location: /');
+        };
+        $allProducts = $this->model->allGoods();
+        $this->pageData['allProducts'] = $allProducts;
+        $this->view->render($this->pageTpl,$this->pageData);
     }
 }

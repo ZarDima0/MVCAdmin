@@ -18,8 +18,8 @@
 <body>
     <div class='side-bar'>
         <a href="">Статистика</a>
-        <a href="">Заказы</a>
-        <a href="">Товары</a>
+        <a href="/cabinet/products">Заказы</a>
+        <a href="/cabinet/products">Товары</a>
         <a href="">Пользователи</a>
     </div>
     <div class="content">
