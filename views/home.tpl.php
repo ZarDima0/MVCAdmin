@@ -1,7 +1,3 @@
-<?php
-
-// var_dump($pageData);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,15 +13,14 @@
 
 <body>
     <div class='side-bar'>
-        <a href="">Статистика</a>
-        <a href="/cabinet/products">Заказы</a>
-        <a href="/cabinet/products">Товары</a>
-        <a href="">Пользователи</a>
+        <a href="/home">Статистика</a>
+        <a href="/home/products">Товары</a>
+        <a href="/home/user">Пользователи</a>
     </div>
     <div class="content">
         <header>
         <div class='title'>
-            <h1>Статистика</h1>
+            <h1>Главная</h1>
             <a href="/home/logout">Выйти</a>
         </div>
         </header>

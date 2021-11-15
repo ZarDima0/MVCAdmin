@@ -40,6 +40,9 @@ body {
 .row {
     margin: 0 -5px 15px 0px;
 }
+h4 {
+  padding: 10px;
+}
 .row:after {
     content: "";
     display: table;
@@ -56,6 +59,38 @@ body {
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
+}
+.button-menu {
+  border: none;
+  font-size: 25px;
+  font-weight: 600;
+}
+.form__add {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:50%;
+  padding: 30px;
+}
+.form__add button {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  background-color: #1d52ff;
+}
+.form__add input {
+  padding: 10px;
+  margin-top: 10px;
+}
+.form__add select {
+  padding: 10px;
+  margin-top: 10px;
+}
+.form {
+  display: none;
+  margin-left: 200px;
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -77,6 +112,9 @@ body {
     }
     .content {
         margin-left: 0px;
+    }
+    .form {
+      margin-left: 0;
     }
 }
 @media screen and (max-width:400px) {

@@ -7,7 +7,7 @@ class HomeController extends Controller
         $this->model = new HomeModel();
 		$this->view = new View();
     }
-
+    
     public function index () {
         if (!$_SESSION['user']) {
             header('location: /');
@@ -27,6 +27,8 @@ class HomeController extends Controller
         $this->pageData['getOrders'] = $getOrders;
         $this->view->render($this->pageTpl, $this->pageData);
     }   
+
+
     public function logout () {
         session_unset();
         header('location: /');
