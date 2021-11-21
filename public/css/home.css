@@ -70,7 +70,6 @@ h4 {
   flex-direction: column;
   flex-wrap: wrap;
   width:50%;
-  padding: 30px;
 }
 .form__add button {
   margin-top: 10px;
@@ -85,12 +84,28 @@ h4 {
   margin-top: 10px;
 }
 .form__add select {
-  padding: 10px;
   margin-top: 10px;
 }
 .form {
   display: none;
   margin-left: 200px;
+  padding: 10px;
+}
+.form__close {
+  width: 10%;
+  padding-left: 4px;
+}
+.form__close img {
+  cursor: pointer;
+}
+#formClose {
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition:transform .8s ease-in-out;
+}
+#formClose {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -115,6 +130,9 @@ h4 {
     }
     .form {
       margin-left: 0;
+    }
+    .form__add {
+      width: 90%;
     }
 }
 @media screen and (max-width:400px) {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кабинет</title>
+    <title>Продукты</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
@@ -85,8 +85,12 @@
             </select>
             <input required="required" name='price' type="text" placeholder='Цена'>
             <input required="required" name='file' type="file">
-            <button class = 'button-submit' type='submit'>Сохранить</button>
+            <button class='button-submit' type='submit'>Сохранить</button>
         </form>
+        <div class='form__close'>
+            <img id='formClose' src="../public/image/close.png"  width="30" height="30" alt="" srcset="">
+        </div>
+
         <script src="../public/js/product.js"></script>
 </body>
 
