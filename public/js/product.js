@@ -12,11 +12,13 @@ buttonShow.addEventListener('click',() => {
     form.style.display = 'flex';
 })
 formData.addEventListener('submit', async (e) => {
+    let resultTitle = document.querySelector('.form__result');
     e.preventDefault();
     let res = await fetch('/products/postProduct',{
         method:'POST',
         body: new FormData(formData)
     })
     let result = await res.json();
-    console.log(result);
+    formData.reset();
+    resultTitle.innerHTML = `Товар под id ${result.id} добавлен`;
 })

@@ -57,6 +57,7 @@
                         <th scope="col">Название</th>
                         <th scope="col">Категория</th>
                         <th scope="col">Цена</th>
+                        <th scope="col">Фото</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,15 +68,18 @@
                 echo '<td aria-label="Название">' . $value['name'] . '</td>';
                 echo '<td aria-label="Фио">' . $value['category'] . '</td>';
                 echo '<td aria-label="Email">' . $value['price'] . '</td>';
+                echo '<td aria-label="image"><img lenght = "50" width = "50"  src=http://mvcadmin/' . $value['url'] . '></td>';
                 echo '</tr>';
                 }
                 ?>
+                <img lenght src="" alt="" srcset="">
                 </tbody>
             </table>
         </div>
     </div>
     <div class="form">
         <form id="formData" class='form__add' action="" method='POST' enctype=”multipart/form-data”>
+        <h2 class = 'form__result' ></h2>
             <input required="required" name='name' type="text" placeholder='Название'>
             <input required="required" name='description' type="text" placeholder='Описание'>
             <select name='category'>
